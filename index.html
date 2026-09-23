@@ -245,6 +245,7 @@
         </section>
     </main>
 
+    <!-- PAGE 2: MMA & COMBAT -->
     <main id="mma" class="page-view pt-28 pb-20 flex-grow">
         <div class="max-w-7xl mx-auto px-6 mb-12">
             <span class="text-xs text-accentP uppercase tracking-[0.3em] font-semibold block mb-2">Combative Record</span>
@@ -252,140 +253,252 @@
             <p class="text-gray-400 font-light text-lg">Professional Mixed Martial Arts & Boxing Portfolio.</p>
         </div>
 
-        <!-- Fight Slider (Horizontal Auto-moving Carousel with Drag & Pause) -->
-<div class="relative w-full overflow-hidden py-6" id="slider-container">
-    <div class="flex overflow-x-auto gap-8 px-6 pb-8 no-scrollbar snap-x snap-mandatory cursor-grab active:cursor-grabbing" id="fight-slider">
+       <!-- Infinite Fight Carousel Section -->
+        <div class="relative w-full overflow-hidden py-6 bg-charcoal/40 border-y border-white/5 my-8 marquee-container">
+            <!-- Fade overlays for sides -->
+            <div class="absolute left-0 top-0 bottom-0 w-16 md:w-32 bg-gradient-to-r from-obsidian to-transparent z-20 pointer-events-none"></div>
+            <div class="absolute right-0 top-0 bottom-0 w-16 md:w-32 bg-gradient-to-l from-obsidian to-transparent z-20 pointer-events-none"></div>
+
+            <!-- Double-buffered track for smooth CSS infinite marquee -->
+            <div class="flex space-x-6 w-max animate-marquee marquee-track py-4 px-3" id="fight-carousel-track">
+                
+                <!-- FIGHT CARD 1 -->
+                <div class="w-[320px] sm:w-[380px] shrink-0 glass-panel rounded-2xl overflow-hidden glass-panel-hover flex flex-col justify-between">
+                    <div class="h-52 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1599552375246-8801ce8d052d?q=80&w=800&auto=format&fit=crop" alt="Edith vs Marcus Thorne" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-charcoal via-transparent to-transparent"></div>
+                        <span class="absolute top-4 left-4 text-[10px] font-bold px-3 py-1 bg-accentP text-obsidian rounded-full uppercase tracking-widest shadow-md">
+                            Win by TKO
+                        </span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <span class="text-xs text-accentS uppercase tracking-widest font-mono block mb-1">WBC Colombo • Round 2</span>
+                            <h3 class="text-xl font-serif font-bold text-white mb-2">Edith vs. Marcus 'The Bull' Thorne</h3>
+                        </div>
+                        <div class="pt-4 mt-4 border-t border-white/10 flex justify-between items-center">
+                            <span class="text-xs text-gray-400 font-light">Pro Welterweight</span>
+                            <a href="https://www.youtube.com/results?search_query=MMA+highlights" target="_blank" rel="noopener noreferrer" class="text-xs uppercase tracking-wider text-accentP hover:text-white transition-colors flex items-center gap-1.5 font-semibold">
+                                <span>[ View Fight Footage ]</span> <i class="fas fa-external-link-alt text-[10px]"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FIGHT CARD 2 -->
+                <div class="w-[320px] sm:w-[380px] shrink-0 glass-panel rounded-2xl overflow-hidden glass-panel-hover flex flex-col justify-between">
+                    <div class="h-52 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1555597673-b21d5c935865?q=80&w=800&auto=format&fit=crop" alt="Edith vs Julian Costa" class="w-full h-full object-cover transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-charcoal via-transparent to-transparent"></div>
+                        <span class="absolute top-4 left-4 text-[10px] font-bold px-3 py-1 bg-white text-obsidian rounded-full uppercase tracking-widest shadow-md">
+                            Unanimous Decision
+                        </span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <span class="text-xs text-accentS uppercase tracking-widest font-mono block mb-1">Asian Combat League • Main Event</span>
+                            <h3 class="text-xl font-serif font-bold text-white mb-2">Edith vs. Julian Costa</h3>
+                        </div>
+                        <div class="pt-4 mt-4 border-t border-white/10 flex justify-between items-center">
+                            <span class="text-xs text-gray-400 font-light">5 Rounds Co-Main</span>
+                            <a href="https://www.youtube.com/results?search_query=MMA+highlights" target="_blank" rel="noopener noreferrer" class="text-xs uppercase tracking-wider text-accentP hover:text-white transition-colors flex items-center gap-1.5 font-semibold">
+                                <span>[ View Fight Footage ]</span> <i class="fas fa-external-link-alt text-[10px]"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FIGHT CARD 3 -->
+                <div class="w-[320px] sm:w-[380px] shrink-0 glass-panel rounded-2xl overflow-hidden glass-panel-hover flex flex-col justify-between">
+                    <div class="h-52 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1574680096145-d05b474e2155?q=80&w=800&auto=format&fit=crop" alt="Edith vs Tyler Vance" class="w-full h-full object-cover transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-charcoal via-transparent to-transparent"></div>
+                        <span class="absolute top-4 left-4 text-[10px] font-bold px-3 py-1 bg-accentS text-obsidian rounded-full uppercase tracking-widest shadow-md">
+                            Win by Submission
+                        </span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <span class="text-xs text-accentS uppercase tracking-widest font-mono block mb-1">Underground Series UAE • Round 1</span>
+                            <h3 class="text-xl font-serif font-bold text-white mb-2">Edith vs. Tyler Vance</h3>
+                        </div>
+                        <div class="pt-4 mt-4 border-t border-white/10 flex justify-between items-center">
+                            <span class="text-xs text-gray-400 font-light">Rear Naked Choke</span>
+                            <a href="https://www.youtube.com/results?search_query=MMA+highlights" target="_blank" rel="noopener noreferrer" class="text-xs uppercase tracking-wider text-accentP hover:text-white transition-colors flex items-center gap-1.5 font-semibold">
+                                <span>[ View Fight Footage ]</span> <i class="fas fa-external-link-alt text-[10px]"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FIGHT CARD 4 -->
+                <div class="w-[320px] sm:w-[380px] shrink-0 glass-panel rounded-2xl overflow-hidden glass-panel-hover flex flex-col justify-between">
+                    <div class="h-52 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1517649763962-0c623266010b?q=80&w=800&auto=format&fit=crop" alt="Edith vs Rahul Nair" class="w-full h-full object-cover transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-charcoal via-transparent to-transparent"></div>
+                        <span class="absolute top-4 left-4 text-[10px] font-bold px-3 py-1 bg-accentP text-obsidian rounded-full uppercase tracking-widest shadow-md">
+                            Win by KO - R1
+                        </span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <span class="text-xs text-accentS uppercase tracking-widest font-mono block mb-1">South Asian Championship</span>
+                            <h3 class="text-xl font-serif font-bold text-white mb-2">Edith vs. Rahul Nair</h3>
+                        </div>
+                        <div class="pt-4 mt-4 border-t border-white/10 flex justify-between items-center">
+                            <span class="text-xs text-gray-400 font-light">Knockout of the Night</span>
+                            <a href="https://www.youtube.com/results?search_query=MMA+highlights" target="_blank" rel="noopener noreferrer" class="text-xs uppercase tracking-wider text-accentP hover:text-white transition-colors flex items-center gap-1.5 font-semibold">
+                                <span>[ View Fight Footage ]</span> <i class="fas fa-external-link-alt text-[10px]"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FIGHT CARD 5 -->
+                <div class="w-[320px] sm:w-[380px] shrink-0 glass-panel rounded-2xl overflow-hidden glass-panel-hover flex flex-col justify-between">
+                    <div class="h-52 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?q=80&w=800&auto=format&fit=crop" alt="Edith vs Alexey Petrov" class="w-full h-full object-cover transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-charcoal via-transparent to-transparent"></div>
+                        <span class="absolute top-4 left-4 text-[10px] font-bold px-3 py-1 bg-white text-obsidian rounded-full uppercase tracking-widest shadow-md">
+                            Win by TKO - R3
+                        </span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <span class="text-xs text-accentS uppercase tracking-widest font-mono block mb-1">Global Combat Games • Bangkok</span>
+                            <h3 class="text-xl font-serif font-bold text-white mb-2">Edith vs. Alexey Petrov</h3>
+                        </div>
+                        <div class="pt-4 mt-4 border-t border-white/10 flex justify-between items-center">
+                            <span class="text-xs text-gray-400 font-light">Striking Clinic</span>
+                            <a href="https://www.youtube.com/results?search_query=MMA+highlights" target="_blank" rel="noopener noreferrer" class="text-xs uppercase tracking-wider text-accentP hover:text-white transition-colors flex items-center gap-1.5 font-semibold">
+                                <span>[ View Fight Footage ]</span> <i class="fas fa-external-link-alt text-[10px]"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- DUPLICATED CARDS FOR SEAMLESS INFINITE LOOPING -->
+                <!-- FIGHT CARD 1 DUP -->
+                <div class="w-[320px] sm:w-[380px] shrink-0 glass-panel rounded-2xl overflow-hidden glass-panel-hover flex flex-col justify-between" aria-hidden="true">
+                    <div class="h-52 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1599552375246-8801ce8d052d?q=80&w=800&auto=format&fit=crop" alt="Edith vs Marcus Thorne" class="w-full h-full object-cover transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-charcoal via-transparent to-transparent"></div>
+                        <span class="absolute top-4 left-4 text-[10px] font-bold px-3 py-1 bg-accentP text-obsidian rounded-full uppercase tracking-widest shadow-md">
+                            Win by TKO
+                        </span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <span class="text-xs text-accentS uppercase tracking-widest font-mono block mb-1">WBC Colombo • Round 2</span>
+                            <h3 class="text-xl font-serif font-bold text-white mb-2">Edith vs. Marcus 'The Bull' Thorne</h3>
+                        </div>
+                        <div class="pt-4 mt-4 border-t border-white/10 flex justify-between items-center">
+                            <span class="text-xs text-gray-400 font-light">Pro Welterweight</span>
+                            <a href="https://www.youtube.com/results?search_query=MMA+highlights" target="_blank" rel="noopener noreferrer" class="text-xs uppercase tracking-wider text-accentP hover:text-white transition-colors flex items-center gap-1.5 font-semibold">
+                                <span>[ View Fight Footage ]</span> <i class="fas fa-external-link-alt text-[10px]"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FIGHT CARD 2 DUP -->
+                <div class="w-[320px] sm:w-[380px] shrink-0 glass-panel rounded-2xl overflow-hidden glass-panel-hover flex flex-col justify-between" aria-hidden="true">
+                    <div class="h-52 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1555597673-b21d5c935865?q=80&w=800&auto=format&fit=crop" alt="Edith vs Julian Costa" class="w-full h-full object-cover transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-charcoal via-transparent to-transparent"></div>
+                        <span class="absolute top-4 left-4 text-[10px] font-bold px-3 py-1 bg-white text-obsidian rounded-full uppercase tracking-widest shadow-md">
+                            Unanimous Decision
+                        </span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <span class="text-xs text-accentS uppercase tracking-widest font-mono block mb-1">Asian Combat League • Main Event</span>
+                            <h3 class="text-xl font-serif font-bold text-white mb-2">Edith vs. Julian Costa</h3>
+                        </div>
+                        <div class="pt-4 mt-4 border-t border-white/10 flex justify-between items-center">
+                            <span class="text-xs text-gray-400 font-light">5 Rounds Co-Main</span>
+                            <a href="https://www.youtube.com/results?search_query=MMA+highlights" target="_blank" rel="noopener noreferrer" class="text-xs uppercase tracking-wider text-accentP hover:text-white transition-colors flex items-center gap-1.5 font-semibold">
+                                <span>[ View Fight Footage ]</span> <i class="fas fa-external-link-alt text-[10px]"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FIGHT CARD 3 DUP -->
+                <div class="w-[320px] sm:w-[380px] shrink-0 glass-panel rounded-2xl overflow-hidden glass-panel-hover flex flex-col justify-between" aria-hidden="true">
+                    <div class="h-52 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1574680096145-d05b474e2155?q=80&w=800&auto=format&fit=crop" alt="Edith vs Tyler Vance" class="w-full h-full object-cover transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-charcoal via-transparent to-transparent"></div>
+                        <span class="absolute top-4 left-4 text-[10px] font-bold px-3 py-1 bg-accentS text-obsidian rounded-full uppercase tracking-widest shadow-md">
+                            Win by Submission
+                        </span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <span class="text-xs text-accentS uppercase tracking-widest font-mono block mb-1">Underground Series UAE • Round 1</span>
+                            <h3 class="text-xl font-serif font-bold text-white mb-2">Edith vs. Tyler Vance</h3>
+                        </div>
+                        <div class="pt-4 mt-4 border-t border-white/10 flex justify-between items-center">
+                            <span class="text-xs text-gray-400 font-light">Rear Naked Choke</span>
+                            <a href="https://www.youtube.com/results?search_query=MMA+highlights" target="_blank" rel="noopener noreferrer" class="text-xs uppercase tracking-wider text-accentP hover:text-white transition-colors flex items-center gap-1.5 font-semibold">
+                                <span>[ View Fight Footage ]</span> <i class="fas fa-external-link-alt text-[10px]"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FIGHT CARD 4 DUP -->
+                <div class="w-[320px] sm:w-[380px] shrink-0 glass-panel rounded-2xl overflow-hidden glass-panel-hover flex flex-col justify-between" aria-hidden="true">
+                    <div class="h-52 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1517649763962-0c623266010b?q=80&w=800&auto=format&fit=crop" alt="Edith vs Rahul Nair" class="w-full h-full object-cover transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-charcoal via-transparent to-transparent"></div>
+                        <span class="absolute top-4 left-4 text-[10px] font-bold px-3 py-1 bg-accentP text-obsidian rounded-full uppercase tracking-widest shadow-md">
+                            Win by KO - R1
+                        </span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <span class="text-xs text-accentS uppercase tracking-widest font-mono block mb-1">South Asian Championship</span>
+                            <h3 class="text-xl font-serif font-bold text-white mb-2">Edith vs. Rahul Nair</h3>
+                        </div>
+                        <div class="pt-4 mt-4 border-t border-white/10 flex justify-between items-center">
+                            <span class="text-xs text-gray-400 font-light">Knockout of the Night</span>
+                            <a href="https://www.youtube.com/results?search_query=MMA+highlights" target="_blank" rel="noopener noreferrer" class="text-xs uppercase tracking-wider text-accentP hover:text-white transition-colors flex items-center gap-1.5 font-semibold">
+                                <span>[ View Fight Footage ]</span> <i class="fas fa-external-link-alt text-[10px]"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FIGHT CARD 5 DUP -->
+                <div class="w-[320px] sm:w-[380px] shrink-0 glass-panel rounded-2xl overflow-hidden glass-panel-hover flex flex-col justify-between" aria-hidden="true">
+                    <div class="h-52 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?q=80&w=800&auto=format&fit=crop" alt="Edith vs Alexey Petrov" class="w-full h-full object-cover transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-charcoal via-transparent to-transparent"></div>
+                        <span class="absolute top-4 left-4 text-[10px] font-bold px-3 py-1 bg-white text-obsidian rounded-full uppercase tracking-widest shadow-md">
+                            Win by TKO - R3
+                        </span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <span class="text-xs text-accentS uppercase tracking-widest font-mono block mb-1">Global Combat Games • Bangkok</span>
+                            <h3 class="text-xl font-serif font-bold text-white mb-2">Edith vs. Alexey Petrov</h3>
+                        </div>
+                        <div class="pt-4 mt-4 border-t border-white/10 flex justify-between items-center">
+                            <span class="text-xs text-gray-400 font-light">Striking Clinic</span>
+                            <a href="https://www.youtube.com/results?search_query=MMA+highlights" target="_blank" rel="noopener noreferrer" class="text-xs uppercase tracking-wider text-accentP hover:text-white transition-colors flex items-center gap-1.5 font-semibold">
+                                <span>[ View Fight Footage ]</span> <i class="fas fa-external-link-alt text-[10px]"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
         
-        <!-- Fight Card 1 -->
-        <div class="min-w-[85vw] sm:min-w-[380px] md:min-w-[420px] snap-center shrink-0 glass-panel rounded-2xl overflow-hidden group border border-white/10 hover:border-accentP/40 transition-all">
-            <div class="h-64 overflow-hidden relative">
-                <img src="https://images.unsplash.com/photo-1599552375246-8801ce8d052d?q=80&w=800&auto=format&fit=crop" alt="Fight Image 1" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-                <div class="absolute inset-0 bg-gradient-to-t from-obsidian via-obsidian/30 to-transparent"></div>
-                <div class="absolute top-4 right-4 text-xs font-bold px-3 py-1 bg-accentP text-obsidian rounded-full uppercase tracking-wider shadow-lg">
-                    Win by TKO
-                </div>
-            </div>
-            <div class="p-6">
-                <h3 class="text-2xl font-serif mb-1 text-white">Edith vs. Marcus Thorne</h3>
-                <p class="text-accentS text-xs tracking-widest uppercase mb-6 font-semibold">WBC Colombo - Round 2 (Strikers Series)</p>
-                <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-xs uppercase tracking-widest text-gray-300 hover:text-white border-b border-accentP pb-1 transition-all">
-                    <i class="fas fa-play text-[10px] text-accentP"></i> Watch Highlight Reel
-                </a>
-            </div>
+        <div class="text-center text-gray-500 text-xs tracking-widest uppercase mb-16 flex items-center justify-center gap-2">
+            <i class="fas fa-pause text-[10px]"></i> Hover over track to pause scrolling
         </div>
-
-        <!-- Fight Card 2 -->
-        <div class="min-w-[85vw] sm:min-w-[380px] md:min-w-[420px] snap-center shrink-0 glass-panel rounded-2xl overflow-hidden group border border-white/10 hover:border-accentS/40 transition-all">
-            <div class="h-64 overflow-hidden relative">
-                <img src="https://images.unsplash.com/photo-1555597673-b21d5c935865?q=80&w=800&auto=format&fit=crop" alt="Fight Image 2" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-                <div class="absolute inset-0 bg-gradient-to-t from-obsidian via-obsidian/30 to-transparent"></div>
-                <div class="absolute top-4 right-4 text-xs font-bold px-3 py-1 bg-white/20 backdrop-blur-md text-white rounded-full uppercase tracking-wider border border-white/20">
-                    Unanimous Decision
-                </div>
-            </div>
-            <div class="p-6">
-                <h3 class="text-2xl font-serif mb-1 text-white">Edith vs. Julian Costa</h3>
-                <p class="text-accentS text-xs tracking-widest uppercase mb-6 font-semibold">Asian Combat League - Main Event</p>
-                <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-xs uppercase tracking-widest text-gray-300 hover:text-white border-b border-accentS pb-1 transition-all">
-                    <i class="fas fa-play text-[10px] text-accentS"></i> View Bout Footage
-                </a>
-            </div>
-        </div>
-
-        <!-- Fight Card 3 -->
-        <div class="min-w-[85vw] sm:min-w-[380px] md:min-w-[420px] snap-center shrink-0 glass-panel rounded-2xl overflow-hidden group border border-white/10 hover:border-accentP/40 transition-all">
-            <div class="h-64 overflow-hidden relative">
-                <img src="https://images.unsplash.com/photo-1574680096145-d05b474e2155?q=80&w=800&auto=format&fit=crop" alt="Fight Image 3" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-                <div class="absolute inset-0 bg-gradient-to-t from-obsidian via-obsidian/30 to-transparent"></div>
-                <div class="absolute top-4 right-4 text-xs font-bold px-3 py-1 bg-accentP text-obsidian rounded-full uppercase tracking-wider shadow-lg">
-                    Win by Submission
-                </div>
-            </div>
-            <div class="p-6">
-                <h3 class="text-2xl font-serif mb-1 text-white">Edith vs. Tyler Vance</h3>
-                <p class="text-accentS text-xs tracking-widest uppercase mb-6 font-semibold">Underground Series - UAE Championship</p>
-                <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-xs uppercase tracking-widest text-gray-300 hover:text-white border-b border-accentP pb-1 transition-all">
-                    <i class="fas fa-play text-[10px] text-accentP"></i> Watch Highlight Reel
-                </a>
-            </div>
-        </div>
-
-        <!-- Fight Card 4 -->
-        <div class="min-w-[85vw] sm:min-w-[380px] md:min-w-[420px] snap-center shrink-0 glass-panel rounded-2xl overflow-hidden group border border-white/10 hover:border-accentS/40 transition-all">
-            <div class="h-64 overflow-hidden relative">
-                <img src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?q=80&w=800&auto=format&fit=crop" alt="Fight Image 4" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-                <div class="absolute inset-0 bg-gradient-to-t from-obsidian via-obsidian/30 to-transparent"></div>
-                <div class="absolute top-4 right-4 text-xs font-bold px-3 py-1 bg-accentS text-obsidian rounded-full uppercase tracking-wider shadow-lg">
-                    Win by KO - Round 1
-                </div>
-            </div>
-            <div class="p-6">
-                <h3 class="text-2xl font-serif mb-1 text-white">Edith vs. Sarah Miller</h3>
-                <p class="text-accentS text-xs tracking-widest uppercase mb-6 font-semibold">Pacific Strike Championship</p>
-                <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-xs uppercase tracking-widest text-gray-300 hover:text-white border-b border-accentS pb-1 transition-all">
-                    <i class="fas fa-play text-[10px] text-accentS"></i> View Knockout Breakdown
-                </a>
-            </div>
-        </div>
-    </div>
-    
-    <div class="text-center text-gray-500 text-xs mt-2 flex justify-center items-center gap-2 tracking-wider uppercase">
-        <i class="fas fa-pause text-accentP text-[10px]"></i> Hover to pause • Drag or swipe to explore full fight catalog
-    </div>
-</div>
-<script>
- (function initFightCarousel() {
-    const slider = document.getElementById('fight-slider');
-    if (!slider) return;
-
-    let isHovered = false;
-    let isMouseDown = false;
-    let startX, scrollLeft;
-
-    // Smooth Auto Scroll Loop
-    function autoScroll() {
-        if (!isHovered && !isMouseDown) {
-            slider.scrollLeft += 1;
-            // Infinite loop: reset to start when reaching the end
-            if (slider.scrollLeft >= slider.scrollWidth - slider.clientWidth - 1) {
-                slider.scrollLeft = 0;
-            }
-        }
-        requestAnimationFrame(autoScroll);
-    }
-
-    // Pause on Mouse Hover / Touch
-    slider.addEventListener('mouseenter', () => isHovered = true);
-    slider.addEventListener('mouseleave', () => {
-        isHovered = false;
-        isMouseDown = false;
-    });
-
-    // Mouse Drag Functionality
-    slider.addEventListener('mousedown', (e) => {
-        isMouseDown = true;
-        startX = e.pageX - slider.offsetLeft;
-        scrollLeft = slider.scrollLeft;
-    });
-
-    slider.addEventListener('mouseup', () => isMouseDown = false);
-
-    slider.addEventListener('mousemove', (e) => {
-        if (!isMouseDown) return;
-        e.preventDefault();
-        const x = e.pageX - slider.offsetLeft;
-        const walk = (x - startX) * 2; // Drag speed multiplier
-        slider.scrollLeft = scrollLeft - walk;
-    });
-
-    // Touch Support for Mobile
-    slider.addEventListener('touchstart', () => isHovered = true, { passive: true });
-    slider.addEventListener('touchend', () => isHovered = false, { passive: true });
-
-    // Start auto scrolling loop
-    requestAnimationFrame(autoScroll);
-})();
-</script>
 
         <!-- Training Booking Section -->
         <section class="max-w-7xl mx-auto px-6 mt-16">

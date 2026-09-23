@@ -29,69 +29,88 @@
             }
         }
     </script>
-    <style>
-        body {
-            background-color: #0a0a0c;
-            color: #ffffff;
-            font-family: 'Inter', sans-serif;
-            overflow-x: hidden;
-        }
-        
-        /* Scrollbar styles */
-        .no-scrollbar::-webkit-scrollbar {
-            display: none;
-        }
-        .no-scrollbar {
-            -ms-overflow-style: none;
-            scrollbar-width: none;
-        }
+   <style>
+    body {
+        background-color: #0a0a0c;
+        color: #ffffff;
+        font-family: 'Inter', sans-serif;
+        overflow-x: hidden;
+    }
+    
+    /* Scrollbar styles */
+    .no-scrollbar::-webkit-scrollbar {
+        display: none;
+    }
+    .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
 
-        .text-gradient {
-            background: linear-gradient(135deg, #e0b0ff 0%, #ffb6c1 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
+    .text-gradient {
+        background: linear-gradient(135deg, #e0b0ff 0%, #ffb6c1 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
 
-        .glass-panel {
-            background: rgba(255, 255, 255, 0.03);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            border: 1px solid rgba(255, 255, 255, 0.07);
-        }
+    .glass-panel {
+        background: rgba(255, 255, 255, 0.03);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border: 1px solid rgba(255, 255, 255, 0.07);
+    }
 
-        .glass-panel-hover {
-            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-        .glass-panel-hover:hover {
-            background: rgba(255, 255, 255, 0.06);
-            border-color: rgba(224, 176, 255, 0.3);
-            transform: translateY(-4px);
-            box-shadow: 0 20px 40px -15px rgba(224, 176, 255, 0.15);
-        }
+    .glass-panel-hover {
+        transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .glass-panel-hover:hover {
+        background: rgba(255, 255, 255, 0.06);
+        border-color: rgba(224, 176, 255, 0.3);
+        transform: translateY(-4px);
+        box-shadow: 0 20px 40px -15px rgba(224, 176, 255, 0.15);
+    }
 
-        /* Page view transition */
-        .page-view {
-            animation: fadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-            display: none;
-        }
-        .page-view.active {
-            display: block;
-        }
+    /* Page view transition */
+    .page-view {
+        animation: fadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        display: none;
+    }
+    .page-view.active {
+        display: block;
+    }
 
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(8px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(8px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
 
-        /* Modal backdrop transition */
-        .modal-active {
-            opacity: 1 !important;
-            pointer-events: auto !important;
+    /* Modal backdrop transition */
+    .modal-active {
+        opacity: 1 !important;
+        pointer-events: auto !important;
+    }
+    .modal-active > div {
+        transform: scale(1) translateY(0) !important;
+    }
+
+    /* --- MARQUEE CAROUSEL ANIMATION --- */
+    .animate-marquee {
+        display: flex;
+        animation: marquee 25s linear infinite;
+    }
+
+    .marquee-container:hover .animate-marquee {
+        animation-play-state: paused; /* Pauses on hover so users can click/read */
+    }
+
+    @keyframes marquee {
+        0% {
+            transform: translateX(0%);
         }
-        .modal-active > div {
-            transform: scale(1) translateY(0) !important;
+        100% {
+            transform: translateX(-50%);
         }
-    </style>
+    }
+</style>
 </head>
 <body class="antialiased selection:bg-accentP selection:text-obsidian min-h-screen flex flex-col justify-between">
 

@@ -327,13 +327,65 @@
                 </a>
             </div>
         </div>
-
     </div>
     
     <div class="text-center text-gray-500 text-xs mt-2 flex justify-center items-center gap-2 tracking-wider uppercase">
         <i class="fas fa-pause text-accentP text-[10px]"></i> Hover to pause • Drag or swipe to explore full fight catalog
     </div>
 </div>
+<script>
+ (function initFightCarousel() {
+    const slider = document.getElementById('fight-slider');
+    if (!slider) return;
+
+    let isHovered = false;
+    let isMouseDown = false;
+    let startX, scrollLeft;
+
+    // Smooth Auto Scroll Loop
+    function autoScroll() {
+        if (!isHovered && !isMouseDown) {
+            slider.scrollLeft += 1;
+            // Infinite loop: reset to start when reaching the end
+            if (slider.scrollLeft >= slider.scrollWidth - slider.clientWidth - 1) {
+                slider.scrollLeft = 0;
+            }
+        }
+        requestAnimationFrame(autoScroll);
+    }
+
+    // Pause on Mouse Hover / Touch
+    slider.addEventListener('mouseenter', () => isHovered = true);
+    slider.addEventListener('mouseleave', () => {
+        isHovered = false;
+        isMouseDown = false;
+    });
+
+    // Mouse Drag Functionality
+    slider.addEventListener('mousedown', (e) => {
+        isMouseDown = true;
+        startX = e.pageX - slider.offsetLeft;
+        scrollLeft = slider.scrollLeft;
+    });
+
+    slider.addEventListener('mouseup', () => isMouseDown = false);
+
+    slider.addEventListener('mousemove', (e) => {
+        if (!isMouseDown) return;
+        e.preventDefault();
+        const x = e.pageX - slider.offsetLeft;
+        const walk = (x - startX) * 2; // Drag speed multiplier
+        slider.scrollLeft = scrollLeft - walk;
+    });
+
+    // Touch Support for Mobile
+    slider.addEventListener('touchstart', () => isHovered = true, { passive: true });
+    slider.addEventListener('touchend', () => isHovered = false, { passive: true });
+
+    // Start auto scrolling loop
+    requestAnimationFrame(autoScroll);
+})();
+</script>
 
         <!-- Training Booking Section -->
         <section class="max-w-7xl mx-auto px-6 mt-16">
